@@ -1,0 +1,46 @@
+/* 전체 페이지 스타일 */
+body {
+    font-family: 'Serif', 'Sans-serif';
+    color: #333;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #444;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+h1, h2 {
+    font-family: 'Serif';
+}
+
+section {
+    padding: 2em;
+    margin: 2em 0;
+}
+
+#history-flow {
+    background-color: #e7e7e7;
+}
+
+#photo-gallery {
+    background-color: #f0f0f0;
+}
+
+#era-themes {
+    background-color: #e7e7e7;
+}
+
+footer {
+    background-color: #444;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
