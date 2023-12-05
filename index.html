@@ -5,6 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>시대의 흐름과 함께하는 변화</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* 스타일링을 위한 CSS 코드를 추가하세요. */
+        #slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+        }
+
+        .slide {
+            display: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+    </style>
+    <script>
+        function showEraDetails(era) {
+            var eraDetails = document.getElementById(era);
+            eraDetails.style.display = "block";
+        }
+
+        var slideIndex = 0;
+
+        function changeSlide(n) {
+            var slides = document.getElementsByClassName("slide");
+            slideIndex += n;
+            if (slideIndex >= slides.length) {
+                slideIndex = 0;
+            }
+            if (slideIndex < 0) {
+                slideIndex = slides.length - 1;
+            }
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex].style.display = "block";
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -14,32 +80,70 @@
     <main>
         <section id="history-flow">
             <h2>역사의 흐름</h2>
-            <!-- 시대별 타임라인과 설명 (예시) -->
-            <button onclick="showEraDetails('era1')">시대 1</button>
-            <div id="era1" style="display:none;">
-                <p>시대 1에 대한 상세 정보...</p>
+            <!-- 타임라인 버튼 -->
+            <button onclick="showEraDetails('era0-500')">0-500</button>
+            <button onclick="showEraDetails('era500-1000')">500-1000</button>
+            <button onclick="showEraDetails('era1000-1500')">1000-1500</button>
+            <button onclick="showEraDetails('era1500-2000')">1500-2000</button>
+
+            <!-- 시대별 상세 정보 -->
+            <div id="era0-500" style="display:none;">
+                <h3>0-500년</h3>
+                <p>
+                    0-100년: 로마 제국의 확장과 번성, 기독교 탄생.<br>
+                    101-200년: 로마 제국의 고전기, 훌라, 트라하, 아드리안왕의 통치, 기독교 핍박.<br>
+                    201-300년: 디오클레티아누스의 테트라크키 체제와 기독교 핍박 강화.<br>
+                    301-400년: 로마 제국에서 기독교 공식 종교로 인정, 로마 제국 붕괴 시작.<br>
+                    401-500년: 서로 대립하는 독일족, 훈프리, 바르바리안 침공, 로마 제국 붕괴 가속화.<br>
+                </p>
+            </div>
+            <div id="era500-1000" style="display:none;">
+                <h3>500-1000년</h3>
+                <p>
+                    501-600년: 동로마 제국의 저력, 퓨사틱 다스크와 제스티니안 제1세의 통치, 이슬람 종교 탄생.<br>
+                    601-700년: 이슬람 정복과 아랍 제국의 성장, 중세 시대 시작.<br>
+                    701-800년: 카를로마뉴스의 카롱지안 제국, 중세 유럽의 페핑 왕국 성립.<br>
+                    801-900년: 비잔틴 제국 회복과 불타누스의 활약, 페핑 왕국 확장.<br>
+                    901-1000년: 비잔틴 제국 채점 후기, 노르만인의 북유럽 정복, 비잔틴 제국 쇠퇴.<br>
+                </p>
+            </div>
+            <div id="era1000-1500" style="display:none;">
+                <h3>1000-1500년</h3>
+                <p>
+                    1001-1100년: 중세 시대 지속, 노르만 제국 성립과 정복 활동, 교회 개혁 초기 단계.<br>
+                    1101-1200년: 십자군 원정과 중동 정복 시도, 유럽 대학과 학문 번성.<br>
+                    1201-1300년: 몽골 제국 확장과 아시아-유럽 영향, 마르코 폴로의 아시아 여행.<br>
+                    1301-1400년: 백성의 권리와 중세 봉건제 논쟁, 블랙데스(흑사병) 유행.<br>
+                    1401-1500년: 르네상스 시대 시작과 인간 중심 주의 예술과 과학 번성, 콜럼버스의 신대륙 발견.<br>
+                </p>
+            </div>
+            <div id="era1500-2000" style="display:none;">
+                <h3>1500-2000년</h3>
+                <p>
+                    1501-1600년: 종교 개혁과 신교회 흐름, 식민지 제국의 확장.<br>
+                    1601-1700년: 귀족주의와 귀족 혁명, 체르니세프스키의 과학적 발견.<br>
+                    1701-1800년: 루이 14세와 프랑스 혁명, 미국 독립 전쟁과 미국의 독립 선언.<br>
+                    1801-1900년: 나폴레옹의 제국과 나폴레옹 전쟁, 공업 혁명과 현대 산업 사회 탄생.<br>
+                    1901-2000년: 20세기의 두 차세대 대전과 냉전, 과학과 기술 발전, 우주 탐사 시작, 전 세계적 인권 운동과 사회 변화.<br>
+                </p>
             </div>
         </section>
 
+        <!-- 사진 갤러리 -->
         <section id="photo-gallery">
             <h2>사진 갤러리</h2>
-            <!-- 각 시대별 주요 사건과 인물 사진 (예시) -->
-            <div class="slide" style="display:block;">
-                <img src="path/to/image1.jpg" alt="Image 1">
-            </div>
-            <div class="slide" style="display:none;">
-                <img src="path/to/image2.jpg" alt="Image 2">
-            </div>
-            <button onclick="changeSlide(-1)">이전</button>
-            <button onclick="changeSlide(1)">다음</button>
-        </section>
-
-        <section id="era-themes">
-            <h2>시대별 테마 컨텐츠</h2>
-            <!-- 시대별 테마 컨텐츠 (예시) -->
-            <button onclick="loadContent('theme1')">테마 1</button>
-            <div id="theme-content">
-                <!-- 동적으로 로드되는 컨텐츠 -->
+            <!-- 슬라이드 쇼 컨테이너 -->
+            <div id="slideshow-container">
+                <!-- 각 슬라이드 -->
+                <div class="slide fade">
+                    <img src="path/to/image1.jpg" alt="Image 1">
+                </div>
+                <div class="slide fade">
+                    <img src="path/to/image2.jpg" alt="Image 2">
+                </div>
+                <!-- 이전/다음 버튼 -->
+                <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                <a class="next" onclick="changeSlide(1)">&#10095;</a>
             </div>
         </section>
     </main>
@@ -48,6 +152,7 @@
         <p>© 2023 시대의 흐름과 함께하는 변화</p>
     </footer>
 
+    <!-- 스크립트 파일을 포함합니다. -->
     <script src="script.js"></script>
 </body>
 </html>
