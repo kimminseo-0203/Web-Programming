@@ -24,7 +24,26 @@ function changeSlide(direction) {
     slides[currentSlide].style.display = "block"; // 새로운 현재 슬라이드를 보여준다
 }
 
+// 사진 갤러리 범위 표시
+function showGalleryRange(start, end) {
+    var slides = document.getElementsByClassName("slide");
+    for (var i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    for (var i = start; i <= end; i++) {
+        slides[i].style.display = "block";
+    }
+}
+
 // 이벤트 리스너 추가
 document.addEventListener("DOMContentLoaded", function() {
-    // 이 부분에 페이지 로딩 시 실행할 코드 추가...
+    // 페이지 로딩 시 실행할 초기 코드 추가...
+
+    // 초기 슬라이드 표시
+    var slides = document.getElementsByClassName("slide");
+    for (var i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[currentSlide].style.display = "block";
 });
