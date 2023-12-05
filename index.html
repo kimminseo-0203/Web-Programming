@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시대의 흐름과 함께하는 변화</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>시대의 흐름과 함께하는 변화</h1>
+    </header>
+
+    <main>
+        <section id="history-flow">
+            <h2>역사의 흐름</h2>
+            <!-- 시대별 타임라인과 설명 (예시) -->
+            <button onclick="showEraDetails('era1')">시대 1</button>
+            <div id="era1" style="display:none;">
+                <p>시대 1에 대한 상세 정보...</p>
+            </div>
+        </section>
+
+        <section id="photo-gallery">
+            <h2>사진 갤러리</h2>
+            <!-- 각 시대별 주요 사건과 인물 사진 (예시) -->
+            <div class="slide" style="display:block;">
+                <img src="path/to/image1.jpg" alt="Image 1">
+            </div>
+            <div class="slide" style="display:none;">
+                <img src="path/to/image2.jpg" alt="Image 2">
+            </div>
+            <button onclick="changeSlide(-1)">이전</button>
+            <button onclick="changeSlide(1)">다음</button>
+        </section>
+
+        <section id="era-themes">
+            <h2>시대별 테마 컨텐츠</h2>
+            <!-- 시대별 테마 컨텐츠 (예시) -->
+            <button onclick="loadContent('theme1')">테마 1</button>
+            <div id="theme-content">
+                <!-- 동적으로 로드되는 컨텐츠 -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 시대의 흐름과 함께하는 변화</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
