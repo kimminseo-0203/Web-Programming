@@ -130,29 +130,33 @@
         </section>
 
         <!-- 사진 갤러리 -->
-        <section id="photo-gallery">
-            <h2>사진 갤러리</h2>
-            <!-- 슬라이드 쇼 컨테이너 -->
-            <div id="slideshow-container">
-                <!-- 각 슬라이드 -->
-                <div class="slide fade">
-                    <img src="path/to/image1.jpg" alt="Image 1">
-                </div>
-                <div class="slide fade">
-                    <img src="path/to/image2.jpg" alt="Image 2">
-                </div>
-                <!-- 이전/다음 버튼 -->
-                <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-                <a class="next" onclick="changeSlide(1)">&#10095;</a>
-            </div>
-        </section>
-    </main>
+<section id="photo-gallery">
+    <h2>사진 갤러리</h2>
+    <!-- 슬라이드 쇼 컨테이너 -->
+    <div id="slideshow-container">
+        <!-- 각 슬라이드 -->
+        <div class="slide fade">
+            <img src="https://github.com/kimminseo-0203/Web-Programming/blob/main/%ED%8B%B0%EB%B2%A0%EB%A6%AC%EC%9A%B0%EC%8A%A4.jpeg?raw=true" alt="Image 1">
+        </div>
+        <div class="slide fade">
+            <img src="https://github.com/kimminseo-0203/Web-Programming/blob/main/%EC%B9%B4%EB%A1%A4%EB%A3%A8%EC%8A%A4.jpeg?raw=true" alt="Image 2">
+        </div>
+        <div class="slide fade">
+            <img src="https://github.com/kimminseo-0203/Web-Programming/blob/main/%EB%A0%88%EC%98%A4%EB%82%98%EB%A5%B4%EB%8F%84%20%EB%8B%A4%EB%B9%88%EC%B9%98.jpeg?raw=true" alt="Image 3">
+        </div>
+        <div class="slide fade">
+            <img src="https://github.com/kimminseo-0203/Web-Programming/blob/main/%EB%A7%88%ED%8B%B4%20%EB%A3%A8%ED%84%B0%20%ED%82%B9.jpeg?raw=true" alt="Image 4">
+        </div>
+        <!-- 이전/다음 버튼 -->
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
 
-    <footer>
-        <p>© 2023 시대의 흐름과 함께하는 변화</p>
-    </footer>
-
-    <!-- 스크립트 파일을 포함합니다. -->
-    <script src="script.js"></script>
-</body>
-</html>
+    <!-- 사진 갤러리 범위 버튼 -->
+    <div id="gallery-buttons">
+        <button onclick="showGalleryRange(0, 0)">0-500</button>
+        <button onclick="showGalleryRange(1, 1)">500-1000</button>
+        <button onclick="showGalleryRange(2, 2)">1000-1500</button>
+        <button onclick="showGalleryRange(3, 3)">1500-2000</button>
+    </div>
+</section>
