@@ -1,6 +1,6 @@
 /* 전체 페이지 스타일 */
 body {
-    font-family: 'Serif', 'Sans-serif';
+    font-family: 'Arial', sans-serif; /* 예시 폰트 */
     color: #333;
     background-color: #f8f8f8;
     margin: 0;
@@ -15,24 +15,25 @@ header {
 }
 
 h1, h2 {
-    font-family: 'Serif';
+    font-family: 'Times New Roman', serif; /* 폰트 변경 예시 */
 }
 
 section {
     padding: 2em;
     margin: 2em 0;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* 박스 그림자 추가 */
+    background-color: #fff; /* 섹션 배경색 변경 */
 }
 
-#history-flow {
+#history-flow, #era-themes {
     background-color: #e7e7e7;
 }
 
 #photo-gallery {
     background-color: #f0f0f0;
-}
-
-#era-themes {
-    background-color: #e7e7e7;
+    display: flex; /* 플렉스박스 레이아웃 적용 */
+    justify-content: center; /* 가운데 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
 }
 
 footer {
@@ -43,4 +44,59 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+/* 버튼 및 링크 스타일링 */
+button, a {
+    background-color: #ddd;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover, a:hover {
+    background-color: #bbb; /* 호버 효과 */
+    color: white;
+}
+
+/* 반응형 디자인 */
+@media screen and (max-width: 600px) {
+    body {
+        background-color: #eaeaea;
+    }
+
+    header, footer {
+        text-align: left;
+    }
+
+    #photo-gallery {
+        flex-direction: column; /* 모바일에서는 세로 정렬 */
+    }
+}
+
+/* 애니메이션 */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.slide {
+    animation: fadeIn 2s;
+}
+
+/* 배경 이미지 */
+#history-flow {
+    background-image: url('history-background.jpg'); /* 배경 이미지 적용 */
+    background-size: cover;
+    background-position: center;
+}
+
+/* 텍스트 효과 */
+h1 {
+    text-shadow: 2px 2px 4px #000000; /* 텍스트 그림자 */
 }
