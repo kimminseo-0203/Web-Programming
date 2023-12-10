@@ -160,3 +160,38 @@
         <button onclick="showGalleryRange(3, 3)">1500-2000</button>
     </div>
 </section>
+       <section id="era-themes">
+            <h2>시대별 테마 컨텐츠</h2>
+            <button onclick="showThemeDetails('theme0-500')">0-500</button>
+            <button onclick="showThemeDetails('theme500-1000')">500-1000</button>
+            <button onclick="showThemeDetails('theme1000-1500')">1000-1500</button>
+            <button onclick="showThemeDetails('theme1500-2000')">1500-2000</button>
+
+            <div id="theme0-500" style="display:none;">
+                <h3>0-500년</h3>
+                <!-- 테마 관련 내용 -->
+            </div>
+            <div id="theme500-1000" style="display:none;">
+                <h3>500-1000년</h3>
+                <!-- 테마 관련 내용 -->
+            </div>
+            <div id="theme1000-1500" style="display:none;">
+                <h3>1000-1500년</h3>
+                <!-- 테마 관련 내용 -->
+            </div>
+            <div id="theme1500-2000" style="display:none;">
+                <h3>1500-2000년</h3>
+                <!-- 테마 관련 내용 -->
+            </div>
+        </section>
+<script>
+        /* 추가된 시대별 테마 컨텐츠 관련 자바스크립트 함수 */
+        function showThemeDetails(theme) {
+            var themeDetails = document.getElementById(theme);
+            if (themeDetails.style.display === "none") {
+                themeDetails.style.display = "block";
+            } else {
+                themeDetails.style.display = "none";
+            }
+        }
+    </script>
